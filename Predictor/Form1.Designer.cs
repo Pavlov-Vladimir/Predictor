@@ -68,7 +68,7 @@ namespace Predictor
             this.buttonPredict.TabIndex = 0;
             this.buttonPredict.Text = "PREDICT";
             this.buttonPredict.UseVisualStyleBackColor = true;
-            this.buttonPredict.Click += new System.EventHandler(this.buttonPredict_Click);
+            this.buttonPredict.Click += new System.EventHandler(this.ButtonPredict_Click);
             // 
             // progressBar1
             // 
