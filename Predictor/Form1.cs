@@ -41,21 +41,26 @@ namespace Predictor
         {
             await Task.Run(() =>
             {
-                for (int i = 1; i <= progressBar1.Maximum; i++)
-                {
-                    this.Invoke(new Action(() =>
-                    {
-                        UpdateProgressBar(i);
-                        this.Text = $"{i} %";
-                    }));
-                    Thread.Sleep(20);
-                }
+                FillProgressBar();
             });
+        }
+
+        private void FillProgressBar()
+        {
+            for (int i = 1; i <= progressBar1.Maximum; i++)
+            {
+                this.Invoke(new Action(() =>
+                {
+                    UpdateProgressBar(i);
+                    this.Text = $"{i} %";
+                }));
+                Thread.Sleep(20);
+            }
         }
 
         private static DialogResult ClarifyInformation()
         {
-            string message = "The answer to  your question must be clearly defined: 'Yes' or 'No'!" +
+            string message = "Your question must have a clear answer like 'Yes' or 'No'!" +
                              "\n\nAre you ready?";
 
             DialogResult dialogResult = MessageBox.Show(
