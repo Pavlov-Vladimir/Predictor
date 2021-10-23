@@ -30,8 +30,8 @@ namespace Predictor
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.buttonPredict = new System.Windows.Forms.Button();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -58,15 +58,6 @@ namespace Predictor
             this.splitContainer1.SplitterDistance = 75;
             this.splitContainer1.TabIndex = 0;
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar1.Location = new System.Drawing.Point(0, 0);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(319, 49);
-            this.progressBar1.Step = 1;
-            this.progressBar1.TabIndex = 0;
-            // 
             // buttonPredict
             // 
             this.buttonPredict.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -78,6 +69,15 @@ namespace Predictor
             this.buttonPredict.Text = "PREDICT";
             this.buttonPredict.UseVisualStyleBackColor = true;
             this.buttonPredict.Click += new System.EventHandler(this.buttonPredict_Click);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.progressBar1.Location = new System.Drawing.Point(0, 0);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(319, 49);
+            this.progressBar1.Step = 1;
+            this.progressBar1.TabIndex = 0;
             // 
             // Form1
             // 
