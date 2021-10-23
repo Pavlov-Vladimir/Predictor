@@ -13,6 +13,8 @@ namespace Predictor
 {
     public partial class Form1 : Form
     {
+        private string formName = "PREDICATOR";
+
         public Form1()
         {
             InitializeComponent();
@@ -28,13 +30,15 @@ namespace Predictor
                     this.Invoke(new Action(() =>
                     {
                         UpdateProgressBar(i);
+                        this.Text = $"{i} %";
                     }));
-                    Thread.Sleep(100);
+                    Thread.Sleep(20);
                 }
             });
             MessageBox.Show("Prediction!");
             buttonPredict.Enabled = true;
             progressBar1.Value = 0;
+            this.Text = formName;
         }
 
         /// <summary>
@@ -54,6 +58,11 @@ namespace Predictor
                 progressBar1.Value = i + 1;
             }
             progressBar1.Value = i;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.Text = formName;
         }
     }
 }
