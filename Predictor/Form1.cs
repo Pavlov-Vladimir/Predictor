@@ -13,7 +13,7 @@ namespace Predictor
 {
     public partial class Form1 : Form
     {
-        private string formName = "PREDICATOR";
+        private const string FORM_NAME = "PREDICATOR";
 
         public Form1()
         {
@@ -36,17 +36,15 @@ namespace Predictor
                 }
             });
             MessageBox.Show("Prediction!");
+
             buttonPredict.Enabled = true;
             progressBar1.Value = 0;
-            this.Text = formName;
+            this.Text = FORM_NAME;
         }
-
-        /// <summary>
-        /// Костыль для обработки анимации progressBar'а
-        /// </summary>
-        /// <param name="i"></param>
+                
         private void UpdateProgressBar(int i)
         {
+            #region Crutch for correct progressBar animation.
             if (i == progressBar1.Maximum)
             {
                 progressBar1.Maximum = i + 1;
@@ -56,13 +54,15 @@ namespace Predictor
             else
             {
                 progressBar1.Value = i + 1;
-            }
+            } 
+            #endregion
+
             progressBar1.Value = i;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Text = formName;
+            this.Text = FORM_NAME;
         }
     }
 }
